@@ -1,0 +1,1 @@
+Use Katalon v.7.7.2 (minimum version)
