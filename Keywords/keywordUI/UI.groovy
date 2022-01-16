@@ -25,7 +25,7 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable
 
 public class UI {
-	
+
 	@Keyword
 	public static void ScreenShot (String iName) {
 		Date date = new Date()
@@ -34,9 +34,8 @@ public class UI {
 		String[] splitDate = formattedDate.split("-")
 		String Folder = splitDate[0] + ' ' + splitDate[1] + ' ' + splitDate[2] + '/'
 		String Time = splitDate[3] + '.' + splitDate[4] + ' - '
-	
+
 		String currentFolder = RunConfiguration.getProjectDir() + '/Screenshot/' + Folder + Time + iName + ".jpeg"
 		WebUI.takeScreenshot(currentFolder)
-
 	}
 }

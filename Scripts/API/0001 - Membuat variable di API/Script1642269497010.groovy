@@ -14,19 +14,23 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
-import keywordUI.UI as UI
+import groovy.json.JsonSlurper
 
-
-/*Screenshot di katalon
- * 1. Fitur screenshot
- * 2. Lokasi file penyimpanan gambar
- * 3. Penamaan File
- * 4. Detail codenya ada di 'Keywords -> keywordUI -> UI.groovy -> ScreenShot'
+/*
+ * 1. Membuat variable di API
+ * 2. Lokasi API ada di 'Object repository -> API -> Variable API'
+ * 3. jsonSlurper untuk parse JSON response
  */
-WebUI.openBrowser("www.google.com", FailureHandling.STOP_ON_FAILURE)
 
-WebUI.maximizeWindow()
+String strUsername = '628321546454'
+String strPassword = 'aaaaaaaaaa1'
 
-UI.ScreenShot("Napi Screenshot")
+def response = WS.sendRequest(findTestObject('API/Variable API',
+	[('varUsername') : strUsername, //varUsername harus sama dengan variable di API
+	 ('varPassword') : strPassword])) //varPassword harus sama dengan variable di API
 
-WebUI.closeBrowser()
+
+def jsonSlurper = new JsonSlurper()
+jsonMessage = jsonSlurper.parseText(response.getResponseBodyContent())
+WebUI.comment(jsonMessage.message)
+
