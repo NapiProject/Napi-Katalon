@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>lbl-errMessage</name>
+   <tag></tag>
+   <elementGuidId>300b446a-eb2d-444e-b10f-4f0e47521c92</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[@id=&quot;login_button_container&quot;]/div/form/div[3]/h3</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>//*[@id=&quot;login_button_container&quot;]/div/form/div[3]/h3</value>
+   </webElementProperties>
+</WebElementEntity>

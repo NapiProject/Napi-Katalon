@@ -18,9 +18,9 @@ DriverCleanerCollector.getInstance().addDriverCleaner(new com.kms.katalon.core.w
 DriverCleanerCollector.getInstance().addDriverCleaner(new com.kms.katalon.core.testng.keyword.internal.TestNGDriverCleaner())
 
 
-RunConfiguration.setExecutionSettingFile('C:\\Users\\thoyy\\AppData\\Local\\Temp\\Katalon\\Test Cases\\API\\0001 - Membuat variable di API\\20220116_084504\\execution.properties')
+RunConfiguration.setExecutionSettingFile('C:\\Users\\thoyy\\AppData\\Local\\Temp\\Katalon\\Test Cases\\WEB\\Login\\Skenario Login\\0003 - Username Null\\20220121_220114\\execution.properties')
 
 TestCaseMain.beforeStart()
 
-        TestCaseMain.runTestCase('Test Cases/API/0001 - Membuat variable di API', new TestCaseBinding('Test Cases/API/0001 - Membuat variable di API',[:]), FailureHandling.STOP_ON_FAILURE , false)
+        TestCaseMain.runTestCase('Test Cases/WEB/Login/Skenario Login/0003 - Username Null', new TestCaseBinding('Test Cases/WEB/Login/Skenario Login/0003 - Username Null',[:]), FailureHandling.STOP_ON_FAILURE , false)
     
