@@ -15,6 +15,14 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
-Date date =  new Date()
+String strCategory = "Cell Phones & Accessories"
 
-WebUI.comment(date.toString())
+WebUI.openBrowser("www.ebay.com", FailureHandling.STOP_ON_FAILURE)
+
+WebUI.maximizeWindow()
+
+WebUI.waitForElementClickable(findTestObject('WEB/List Data/btn-Category'), GlobalVariable.maxDelay)
+
+WebUI.click(findTestObject('WEB/List Data/btn-Category'))
+
+WebUI.click(findTestObject('WEB/List Data/btn-CategoryDetail',[('paramCategoryDetail') : strCategory]), FailureHandling.STOP_ON_FAILURE)

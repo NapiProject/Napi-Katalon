@@ -34,7 +34,7 @@ if (iScenario == "Valid Data") {
 	WebUI.waitForElementClickable(findTestObject('Object Repository/WEB/Login/lbl-Product'), GlobalVariable.maxDelay, FailureHandling.STOP_ON_FAILURE)
 	KeywordUtil.markPassed("Scenario " + iScenario + " OK!")
 	WebUI.closeBrowser()
-}
+	}
 
 else if (iScenario == "Invalid Data") {
 	WebUI.waitForElementClickable(findTestObject('Object Repository/WEB/Login/lbl-errMessage'), GlobalVariable.maxDelay, FailureHandling.STOP_ON_FAILURE)
